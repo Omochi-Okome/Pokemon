@@ -1,7 +1,6 @@
 import {useEffect, useState} from "react";
 import './App.css';
 import {getAllPokemon} from "./utils/pokemon.js";
-import { urlencoded } from "express";
 
 function App() {
   const initialURL = "https://pokeapi.co/api/v2/pokemon";
@@ -18,14 +17,7 @@ function App() {
     fetchPokemonData();
   }, []);
 
-  const loadPokemon = () => {
-    let _pokemonData = Promise.all(
-      data.map((pokemon) => {
-        // console.log(pokemon);
-        let pokemonRecord = getPokemon(pokemon.url);
-      })
-    )
-  };
+  const loadPokemon = () => {};
   return <div className="App">
     {loading ? (
       <h1>ロード中・・・</h1>

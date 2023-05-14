@@ -21,8 +21,7 @@ function App() {
   const loadPokemon = () => {
     let _pokemonData = Promise.all(
       data.map((pokemon) => {
-        // console.log(pokemon);
-        let pokemonRecord = getPokemon(pokemon.url);
+        console.log(pokemon);
       })
     )
   };
